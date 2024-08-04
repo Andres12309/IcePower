@@ -1,9 +1,17 @@
 // style for the landing page
-.index-page .squares{
+.index-page .squares {
   @include linear-gradient($info-states, $info);
+  background-image: url($asset-base-path + "/img/logoIcePower.png");
+  background-size: cover;
+  background-position: center;
 }
-.register-page, .section.section-signup{
-  .squares, .square {
+.register-page,
+.section.section-signup {
+  .squares,
+  .square {
     @include linear-gradient($primary-states, $primary);
+    background-image: url($asset-base-path + "/img/logoIcePower.png");
+    background-size: cover;
+    background-position: center;
   }
 }

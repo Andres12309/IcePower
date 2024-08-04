@@ -28,7 +28,7 @@ export default function Examples() {
       <Container className="text-center">
         <Row>
           <Col sm="6">
-            <Link to="landing-page">
+            <Link to="/landing-page">
               <img
                 alt="..."
                 className="img-raised"
@@ -38,14 +38,14 @@ export default function Examples() {
             <Button
               className="btn-simple btn-round"
               color="primary"
-              to="landing-page"
+              to="/landing-page"
               tag={Link}
             >
               View Landing Page
             </Button>
           </Col>
           <Col sm="6">
-            <Link to="profile-page">
+            <Link to="/profile-page">
               <img
                 alt="..."
                 className="img-raised"
@@ -55,7 +55,7 @@ export default function Examples() {
             <Button
               className="btn-simple btn-round"
               color="primary"
-              to="profile-page"
+              to="/profile-page"
               tag={Link}
             >
               View Profile Page

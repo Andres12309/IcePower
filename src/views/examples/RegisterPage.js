@@ -1,20 +1,3 @@
-/*!
-
-=========================================================
-* BLK Design System React - v1.2.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/blk-design-system-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/blk-design-system-react/blob/main/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import classnames from "classnames";
 // reactstrap components
@@ -36,11 +19,13 @@ import {
   Container,
   Row,
   Col,
+  UncontrolledTooltip,
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import Footer from "components/Footer/Footer.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
+import Typography from "views/IndexSections/Typography";
 
 export default function RegisterPage() {
   const [squares1to6, setSquares1to6] = React.useState("");
@@ -62,22 +47,22 @@ export default function RegisterPage() {
     let posY = event.clientY - window.innerWidth / 6;
     setSquares1to6(
       "perspective(500px) rotateY(" +
-        posX * 0.05 +
+        posX * 0.08 +
         "deg) rotateX(" +
-        posY * -0.05 +
+        posY * -0.08 +
         "deg)"
     );
     setSquares7and8(
       "perspective(500px) rotateY(" +
-        posX * 0.02 +
+        posX * 0.06 +
         "deg) rotateX(" +
-        posY * -0.02 +
+        posY * -0.06 +
         "deg)"
     );
   };
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar />
       <div className="wrapper">
         <div className="page-header">
           <div className="page-header-image" />
@@ -99,9 +84,9 @@ export default function RegisterPage() {
                     <CardHeader>
                       <CardImg
                         alt="..."
-                        src={require("assets/img/square-purple-1.png")}
+                        src={require("assets/img/square1.png")}
                       />
-                      <CardTitle tag="h4">Register</CardTitle>
+                      <CardTitle tag="h4">Refréscate</CardTitle>
                     </CardHeader>
                     <CardBody>
                       <Form className="form">
@@ -116,7 +101,7 @@ export default function RegisterPage() {
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
-                            placeholder="Full Name"
+                            placeholder="Usuario"
                             type="text"
                             onFocus={(e) => setFullNameFocus(true)}
                             onBlur={(e) => setFullNameFocus(false)}
@@ -150,7 +135,7 @@ export default function RegisterPage() {
                             </InputGroupText>
                           </InputGroupAddon>
                           <Input
-                            placeholder="Password"
+                            placeholder="Contraseña"
                             type="text"
                             onFocus={(e) => setPasswordFocus(true)}
                             onBlur={(e) => setPasswordFocus(false)}
@@ -161,13 +146,24 @@ export default function RegisterPage() {
                             <Input type="checkbox" />
                             <span className="form-check-sign" />I agree to the{" "}
                             <a
-                              href="#pablo"
+                              href="#"
                               onClick={(e) => e.preventDefault()}
+                              id="termsCondictions"
                             >
                               terms and conditions
                             </a>
                             .
                           </Label>
+                          <UncontrolledTooltip
+                            placement="bottom"
+                            target="termsCondictions"
+                          >
+                            Bienvenido a Icepower. Al acceder y utilizar nuestro
+                            sitio web y servicios, aceptas estar sujeto a los
+                            siguientes términos y condiciones. Si no estás de
+                            acuerdo con alguna parte de estos términos, por
+                            favor, no utilices nuestro sitio web.
+                          </UncontrolledTooltip>
                         </FormGroup>
                       </Form>
                     </CardBody>
